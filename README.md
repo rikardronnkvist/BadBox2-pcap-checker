@@ -2,7 +2,6 @@
 Extract BB2 info from a larger set of data from Wireshark
 
 ## Quick How-To
-
 1. Setup siloed VLAN
 2. tcpdump the traffic to Wireshark
 3. Export from Wireshark to CSV
@@ -12,7 +11,7 @@ Extract BB2 info from a larger set of data from Wireshark
 ```bash
 /Applications/Wireshark.app/Contents/MacOS/Wireshark -k -w /Volumes/T9/capture.pcap -i <(ssh root@192.168.1.3 -p 22 tcpdump -i br0.10 -U -w - )
 ```
-This will stream all trafic from bf0.10 (VLAN10) on the AP available via SSH on 192.168.1.3
+This will stream all trafic from br0.10 (VLAN10) on the AP available via SSH on 192.168.1.3 (Tested with Unif AP AC Pro G2)
 
 
 ## BadBox2 ?
